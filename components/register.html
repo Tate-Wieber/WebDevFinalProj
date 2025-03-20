@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <body>
 
@@ -12,50 +12,71 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="../index.html">Team Reviews</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                <li><a class="dropdown-item" href="register.html">Register</a></li>
+            </ul>
+            
+            <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+                <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    
 
     <!-- Register Form -->
-    <div class="container col-lg-6 col-md-4 p-4">
+    <div class="container col-lg-6 col-md-6 p-4">
         <div class="card p-2">
             <h4 class="card-title text-center">Register</h4>
             <form>
                 <div class="mb-3">
-                    <label for="name" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="name" required>
+                    <label for="txtName" class="form-label">Full Name *</label>
+                    <input type="text" class="form-control" id="txtName" required>
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" required>
+                    <label for="txtEmail" class="form-label">Email address *</label>
+                    <input type="email" class="form-control" id="txtEmail" required>
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" required>
+                    <label for="txtPassword" class="form-label">Password *</label>
+                    <input type="password" class="form-control" id="txtPassword" required>
                 </div>
                 <div class="mb-3">
-                    <label for="role" class="form-label">Register as:</label>
-                    <select class="form-select" id="role" required>
-                        <option>Select One</option>
+                    <label for="selRole" class="form-label">Register as:</label>
+                    <select class="form-select" id="selRole" required onchange="toggleStudent()">
+                        <option value="" disabled selected>Select One</option>
                         <option value="student">Student</option>
                         <option value="instructorS">Instructor</option>
                     </select>
                 </div>
+
+                <div id="studentField"" class="mb-3 d-none">
+                    <div class="mb-3">
+                        <label>Phone Number</label>
+                        <input type="txt" class="form-control" id="numPhone"></input>
+                    </div>
+                    <div class="mb-3">
+                        <label>Discord Username</label>
+                        <input type="txt" class="form-control" id="txtDiscordUser"></input>
+                    </div>
+                </div>
+
             </form>
 
             <div class="text-center">
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button id="btnRegister" type="submit" class="btn btn-primary">Register</button>
             </div>
         </div>
     </div>
+
+    <script src="../js/lib/bootstrap.bundle.min.js"></script>
+    <script src="../js/register.js"></script>
 
 </body>
 </html>
