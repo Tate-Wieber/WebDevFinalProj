@@ -1,0 +1,22 @@
+<div class="text-light p-4">
+    <h2 class="text-center">Team Member Review</h2>
+    <p class="text-center">Please review your team members.</p>
+
+    <div class="card p-3 bg-secondary">
+        <h4 id="strTeamMember">Reviewing: <span class="text-info">[Team Member Name]</span></h4>
+
+        <div class="mb-3 mt-3">
+            <label for="scoreInput" class="form-label">Score (0-100)</label>
+            <input type="number" class="form-control" id="scoreInput" min="0" max="100" placeholder="Enter a score">
+        </div>
+      
+        <div class="mb-3">
+            <label for="feedbackInput" class="form-label">Feedback</label>
+            <textarea class="form-control" id="feedbackInput" rows="5" placeholder="Write your feedback here..."></textarea>
+        </div>
+      
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-primary" id="nextMemberBtn">Submit & Next</button>
+        </div>
+    </div>
+</div>
