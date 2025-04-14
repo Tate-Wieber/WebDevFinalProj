@@ -1,15 +1,18 @@
 
-function toggleStudent()
+export function toggleStudent()
 {
-    let strRole = document.getElementById("selRole").value
+    let strRole = document.getElementById("selRole")
     let strStudentfield = document.getElementById("studentField")
 
-    if (strRole === "student")
-    {
-        strStudentfield.classList.remove("d-none")
-    }
-    else
-    {
-        strStudentfield.classList.add("d-none")
-    }
+    strRole.addEventListener("change", () => {
+        const role = strRole.value;
+        if (role === "student")
+        {
+            strStudentfield.classList.remove("d-none")
+        }
+        else
+        {
+            strStudentfield.classList.add("d-none")
+        }
+    })
 }
