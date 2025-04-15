@@ -6,7 +6,10 @@ const routes = {
   "#home": "components/home.html",
   "#login": "components/login.html",
   "#register": "components/register.html",
-  "#complete-review": "components/student/complete-review.html"
+  "#complete-review": "components/student/complete-review.html",
+  "#feedback": "components/student/feedback.html",
+  "#dashboard": "components/student/dashboard.html",
+  "#report": "components/student/report.html"
 };
 
 async function loadView(path) {
