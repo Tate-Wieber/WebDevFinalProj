@@ -1,0 +1,28 @@
+<!-- Create Review Page -->
+<div class="text-light p-4">
+    <h2>Create Review</h2>
+    <p class="mb-4">Build a custom review form using the options below.</p>
+
+    <form aria-label="Create review form">
+        <div class="mb-3">
+            <label for="txtReviewTitle" class="form-label">Review Title</label>
+            <input type="text" class="form-control" id="txtReviewTitle" placeholder="Midterm Peer Review">
+        </div>
+
+        <div class="mb-3">
+            <label for="selQuestionType" class="form-label">Question Type</label>
+            <select class="form-select" id="selQuestionType">
+                <option value="likert">Likert Scale</option>
+                <option value="multiple">Multiple Choice</option>
+                <option value="short">Short Answer</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="txtQuestion" class="form-label">Question</label>
+            <input type="text" class="form-control" id="txtQuestion" placeholder="Enter question text...">
+        </div>
+
+        <button class="btn btn-warning" type="submit" aria-label="Add question button">Add Question</button>
+    </form>
+</div>
