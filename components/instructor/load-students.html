@@ -1,0 +1,19 @@
+<!-- Load Students Page -->
+<div class="text-light p-4">
+    <h2>Load Students</h2>
+    <p class="mb-4">Upload a student list or invite students via a course code.</p>
+
+    <form aria-label="Load students form">
+        <div class="mb-3">
+            <label for="fileUpload" class="form-label">Upload CSV File</label>
+            <input type="file" class="form-control" id="fileUpload" accept=".csv">
+        </div>
+
+        <div class="mb-3">
+            <label for="txtCourseCode" class="form-label">Or share this course code:</label>
+            <input type="text" class="form-control" id="txtCourseCode" value="ABC123" readonly>
+        </div>
+
+        <button class="btn btn-primary" type="submit" aria-label="Submit student list">Submit</button>
+    </form>
+</div>
